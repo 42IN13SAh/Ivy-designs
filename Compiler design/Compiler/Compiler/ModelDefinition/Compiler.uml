@@ -206,7 +206,7 @@
       <class
         Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
         name="CompilerToken"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
@@ -252,8 +252,8 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="8d64e1ad-2ef1-4036-950a-75c0e2605295"
-            name="OperationType operationType"
+            Id="dcf84107-974f-4206-b07c-40b2cc4ade0a"
+            name="Object left"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -264,8 +264,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="27a34071-404f-4d67-abf1-780cb55b9868"
-            name="List&lt;Object&gt; data"
+            Id="d295a62b-8618-4d41-a556-35ce62a1dbda"
+            name="Object right"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -276,8 +276,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="d85cb080-27a2-4f92-ac58-ef06c71c84a2"
-            name="String functionName"
+            Id="c1833de1-a107-4ecb-9e29-5a5386ce9ce9"
+            name="Object result"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -292,12 +292,50 @@
           <operation
             Id="81896555-7fad-4669-9090-f924fcf5ec30"
             name="execute"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f207c445-e793-4a68-9bec-7a02b51c1040"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="8ba4505a-ef1b-4e45-93c7-496a8ff338d2"
+                      LastKnownName="void"
+                      LastKnownLocation="Compiler.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3fafefa1-ea8e-429d-8ca8-f1e151c9d154"
+            name="getResult"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cf3eda75-ef70-42b7-9433-27142cd60dcc"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="91e3da57-bd17-4dbf-a755-2ff8734b203d"
+                      LastKnownName="Object"
+                      LastKnownLocation="Compiler.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -518,9 +556,178 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="26ddee9a-16bd-46d3-a9c1-8b1e585bda6c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="833594a7-6301-43ad-9b05-3aeafd70a9f9"
+                      LastKnownName="Action"
+                      LastKnownLocation="Compiler.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="99dfa109-de24-40ee-ac46-2eb45f656a1f"
+        name="DoNothingAction"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="3c87cbf9-fa2d-4bc5-b6bb-b3e2837d1e87"
+            isSubstitutable="false">
+            <classMoniker
+              Id="833594a7-6301-43ad-9b05-3aeafd70a9f9"
+              LastKnownName="Action"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5d85963d-5e82-4300-b75c-09de14b119d1"
+        name="IfCompilerToken"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="95e530d1-6885-4511-8d93-7c765caeb23d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
+              LastKnownName="CompilerToken"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f5c42f77-5e15-4c5e-8c93-4d67cd376fca"
+        name="WhileCompilerToken"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="d7b4da61-58b2-4383-9f97-344cb6ff4a88"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
+              LastKnownName="CompilerToken"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2adb346c-5bbc-4497-bc90-639c986101b2"
+        name="AddCompilerToken"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="98c7f1b7-6809-4d78-be54-9198b862edcd"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
+              LastKnownName="CompilerToken"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ff436317-5b2d-4c21-a8c5-36b9b2483626"
+        name="CompilerTokenFactory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="a10be927-332b-4838-bdcc-7943adf2dc8b"
+            name="Map&lt;string, ICompilerToken&gt; map"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4c2fefbf-43ec-47ba-b039-98b1cdc613b4"
+        name="FunctionCompilerToken"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="ebc87d28-476b-4c1d-92fe-40e17b2d49e7"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
+              LastKnownName="CompilerToken"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="7f4980bb-921e-4ad9-849e-bd672cb22c4f"
+            name="String functionName"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f93dffd2-3f90-4868-87c9-e618d56531ac"
+            name="List&lt;Object&gt; data"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="91e3da57-bd17-4dbf-a755-2ff8734b203d"
+        name="Object" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8ba4505a-ef1b-4e45-93c7-496a8ff338d2"
+        name="void" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
