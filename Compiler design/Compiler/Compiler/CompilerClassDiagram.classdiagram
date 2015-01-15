@@ -16,12 +16,12 @@
               <associationHasOwnedEnds>
                 <memberEnd Id="be3772a3-4302-4563-b0e6-702219241f88" name="SymbolTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <lowerValueInternal>
-                    <literalString Id="85f7d58b-5979-4113-b32b-a65964a5d4cc" name="Lower" value="0">
+                    <literalString Id="85f7d58b-5979-4113-b32b-a65964a5d4cc" name="Lower" value="1">
                       <elementDefinition Id="63915690-2a21-4768-9454-8350e456914d" />
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="a4fc14c3-baf8-4487-b98f-c8a90a874d18" name="Upper" value="*">
+                    <literalString Id="a4fc14c3-baf8-4487-b98f-c8a90a874d18" name="Upper" value="1">
                       <elementDefinition Id="752d4d27-b19a-42fd-a622-f21bb0297212" />
                     </literalString>
                   </upperValueInternal>
@@ -59,11 +59,11 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="f6546b3e-d7ef-49ea-8ec6-ba3b864b5440" name="List&lt;SymbolTable&gt; symbolTables" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="0799a3aa-69f6-4d91-a376-e1610b97ffa0" />
-          </property>
           <property Id="e94f09de-7c64-4266-ac63-9ab26728badb" name="Action firstAction" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="f7988e19-7b40-4604-a123-d7170f159b70" />
+          </property>
+          <property Id="51ceb86e-9dfe-45b4-b26d-6dab4f36f2fd" name="Action lastAction" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d7f97fd1-7286-47c0-925f-7928394bf946" />
           </property>
         </ownedAttributesInternal>
       </class>
@@ -84,45 +84,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="f09b9faa-dfb5-4606-b908-9a6c7e488795" name="CompilerToken" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087" />
-        <ownedAttributesInternal>
-          <property Id="ec2d5c36-4f8e-4ce8-96f2-90f7365cc5f7" name="Object left" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="dcf84107-974f-4206-b07c-40b2cc4ade0a" />
-          </property>
-          <property Id="94edd5de-6956-410e-a002-b709da2ca153" name="Object right" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="d295a62b-8618-4d41-a556-35ce62a1dbda" />
-          </property>
-          <property Id="8ed23755-d442-442b-b852-9a97b646ed4b" name="Object result" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="c1833de1-a107-4ecb-9e29-5a5386ce9ce9" />
-          </property>
-        </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="4b0c0666-4242-4e26-8259-fea350360d5f" name="execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="81896555-7fad-4669-9090-f924fcf5ec30" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="63afa9ad-ec8d-4d09-93a6-c7a8ca695bc9" direction="Return">
-                  <elementDefinition Id="f207c445-e793-4a68-9bec-7a02b51c1040" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="b0fa8e46-f7e6-4aa6-a5c5-91b0c9de46b4" LastKnownName="void" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="df58352a-d1ab-4465-ad31-aed85aa74153" name="getResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="3fafefa1-ea8e-429d-8ca8-f1e151c9d154" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="ae55fb93-8662-4d2a-b484-1f9184b00608" direction="Return" isUnique="false">
-                  <elementDefinition Id="cf3eda75-ef70-42b7-9433-27142cd60dcc" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="5fb5b60b-c664-4f4a-b4b5-041db47e4d8b" LastKnownName="Object" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -154,6 +115,32 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="172a8caf-9a31-499b-aad4-47c4591d2f06" />
+          </association>
+          <association Id="a226ca46-6b1f-4fe8-a890-96f0311f7e45" isDerived="false" sourceEndRoleName="SymbolTable" targetEndRoleName="FunctionSymbol" isLeaf="false" isAbstract="false">
+            <classMoniker Id="218a2116-4601-49d9-998d-6f1a31211dc8" LastKnownName="FunctionSymbol" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2aa1917f-3ee2-4887-810a-26859233c6bd" name="SymbolTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2ec88cb7-134f-4327-b73f-b374a8c582b8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b3b0e98-e1f6-4a26-afaa-55ef346f980a" name="FunctionSymbol" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="bb231850-c43c-4346-8368-79d804add703" name="Lower" value="0">
+                      <elementDefinition Id="28e931d5-5d88-4bda-8e54-188b7043f9c7" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a460f28d-f336-4ebe-ba0f-76239faa98b8" name="Upper" value="*">
+                      <elementDefinition Id="906ef322-5e91-44f9-8b0a-ed8188f419bc" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="21f2ec35-6f21-4f80-8608-3451e7ca9e23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fd8f65a7-b5cb-4f35-ae97-916b4f5d7262" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -227,49 +214,6 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="540b8fd5-a253-4e63-aceb-b2a46db5c064" name="IfCompilerToken" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="5d85963d-5e82-4300-b75c-09de14b119d1" />
-        <generalsInternal>
-          <generalization Id="43992728-bba7-4ba6-bb34-358e4b45a3cd" isSubstitutable="false">
-            <classMoniker Id="f09b9faa-dfb5-4606-b908-9a6c7e488795" LastKnownName="CompilerToken" />
-            <elementDefinition Id="95e530d1-6885-4511-8d93-7c765caeb23d" />
-          </generalization>
-        </generalsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="9db1c839-a08c-4e30-b745-f4e646c36ca2" name="WhileCompilerToken" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="f5c42f77-5e15-4c5e-8c93-4d67cd376fca" />
-        <generalsInternal>
-          <generalization Id="20c0982f-e709-48e9-9c1f-d18670bb7e8b" isSubstitutable="false">
-            <classMoniker Id="f09b9faa-dfb5-4606-b908-9a6c7e488795" LastKnownName="CompilerToken" />
-            <elementDefinition Id="d7b4da61-58b2-4383-9f97-344cb6ff4a88" />
-          </generalization>
-        </generalsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="eac0ce0e-21ac-492f-a305-66ed5d2935ca" name="AddCompilerToken" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="2adb346c-5bbc-4497-bc90-639c986101b2" />
-        <generalsInternal>
-          <generalization Id="ae861a31-2a2a-4d66-9e02-b9d463fab9ee" isSubstitutable="false">
-            <classMoniker Id="f09b9faa-dfb5-4606-b908-9a6c7e488795" LastKnownName="CompilerToken" />
-            <elementDefinition Id="98c7f1b7-6809-4d78-be54-9198b862edcd" />
-          </generalization>
-        </generalsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="dd984720-c14b-4a68-a725-b3a3f87db913" name="CompilerTokenFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="ff436317-5b2d-4c21-a8c5-36b9b2483626" />
-        <ownedAttributesInternal>
-          <property Id="33275e9b-76a7-4617-a081-19c40b7ea9f8" name="Map&lt;string, ICompilerToken&gt; map" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="a10be927-332b-4838-bdcc-7943adf2dc8b" />
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
       <class Id="db76cee4-aeb6-4884-a29b-df1be1c856f0" name="FunctionCompilerToken" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="4c2fefbf-43ec-47ba-b039-98b1cdc613b4" />
         <generalsInternal>
@@ -278,12 +222,40 @@
             <elementDefinition Id="ebc87d28-476b-4c1d-92fe-40e17b2d49e7" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="5408a206-7295-488f-8089-9be409be7e3c" isDerived="false" sourceEndRoleName="FunctionCompilerToken" targetEndRoleName="ReturnValueCompilerToken" isLeaf="false" isAbstract="false">
+            <classMoniker Id="248ddc9c-f0dc-4c55-ad1e-37b835570639" LastKnownName="ReturnValueCompilerToken" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb425bdb-5d63-4f44-ac3a-ce40d94e2c84" name="FunctionCompilerToken" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="238265fe-b022-4c72-ba00-092aba174542" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aec7bdbe-4c1f-4241-bafb-766ded567221" name="ReturnValueCompilerToken" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="5e8ffece-3560-462d-a296-c90d4eac51c7" name="Lower" value="0">
+                      <elementDefinition Id="0309049b-f45b-4516-9b37-24c8239633dd" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c908a935-d285-447c-896f-e25de69702ba" name="Upper" value="*">
+                      <elementDefinition Id="09211264-f783-4fca-9baa-96f572d22f30" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="675ffe46-3df6-4155-8d60-f28898d1b6a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="209efca2-d797-4cb0-bd8c-2a699049380e" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
-          <property Id="6460a92b-c4da-4eac-a77e-0c674f2dab6a" name="String functionName" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="7f4980bb-921e-4ad9-849e-bd672cb22c4f" />
+          <property Id="7376e22d-0ef2-4184-b9d1-c9055c0e3f2d" name="string name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="06770a46-5193-4129-868b-3a2ee72c65b0" />
           </property>
-          <property Id="8656871f-767d-4262-97a0-eaec38d1a69f" name="List&lt;Object&gt; data" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="f93dffd2-3f90-4868-87c9-e618d56531ac" />
+          <property Id="c7a4176f-f929-4296-aa52-e248a96ada67" name="List&lt;string&gt; argumentNames" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="48d6f3fc-2256-4450-8410-b4c938fe3aca" />
           </property>
         </ownedAttributesInternal>
       </class>
@@ -293,16 +265,270 @@
         <elementDefinition Id="833594a7-6301-43ad-9b05-3aeafd70a9f9" />
       </referencedType>
     </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="b0fa8e46-f7e6-4aa6-a5c5-91b0c9de46b4" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
-        <elementDefinition Id="8ba4505a-ef1b-4e45-93c7-496a8ff338d2" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="5fb5b60b-c664-4f4a-b4b5-041db47e4d8b" name="Object" isAbstract="false" isLeaf="false" cachedFullName="Object">
-        <elementDefinition Id="91e3da57-bd17-4dbf-a755-2ff8734b203d" />
-      </referencedType>
-    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e7db2866-f18c-49cb-bfa2-b3d35ce8f94c" name="VarCompilerToken" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="716c1860-1600-4d0a-ae27-be69a35f011d" />
+        <generalsInternal>
+          <generalization Id="74c7cffb-8362-47ba-a8a7-91b25a376977" isSubstitutable="false">
+            <classMoniker Id="f09b9faa-dfb5-4606-b908-9a6c7e488795" LastKnownName="CompilerToken" />
+            <elementDefinition Id="6a19c3f0-80dd-4f06-9f4c-2f0b1cda4714" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="4711c992-4113-486f-ba84-802aae4de113" name="string name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bee43ce7-e8c2-4376-b259-5ea75fe31c3f" />
+          </property>
+          <property Id="266bd8b3-b455-4144-a1ed-75467c013b17" name="TokenType frontOperator" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="21ac4d51-5837-49f6-87a8-95352624f1f6" />
+          </property>
+          <property Id="0bbf3e63-cc4f-46cd-ac82-a7d66139f9c7" name="TokenType backOperator" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="906a2363-08a7-4ce5-a884-6c93fa7398e9" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="248ddc9c-f0dc-4c55-ad1e-37b835570639" name="ReturnValueCompilerToken" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cf7f91c0-60d2-4411-bf97-ebe05dd318f3" />
+        <generalsInternal>
+          <generalization Id="0fc94053-de37-479d-9410-370fcbc9d382" isSubstitutable="false">
+            <classMoniker Id="f09b9faa-dfb5-4606-b908-9a6c7e488795" LastKnownName="CompilerToken" />
+            <elementDefinition Id="1a74fe54-dc5e-432b-aff6-bb8e02d64f24" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="bc689aa7-c2c5-40c7-bb4a-3274aaf01635" name="string name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b966eb3d-707e-4ed6-b450-b82680682212" />
+          </property>
+          <property Id="7782539e-9f93-444c-be74-dabedef1f15b" name="List&lt;ReturnValueCompilerToken&gt; arguments" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b6868832-2626-4493-b988-c417430b4777" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9850fa1f-ada0-47bd-a620-20ea7fd26f03" name="ConditionCompilerToken" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4347f083-3275-4c58-95e3-95c7fc024f31" />
+        <generalsInternal>
+          <generalization Id="53033906-2db5-4483-8f27-8982962a5648" isSubstitutable="false">
+            <classMoniker Id="f09b9faa-dfb5-4606-b908-9a6c7e488795" LastKnownName="CompilerToken" />
+            <elementDefinition Id="22b2b5ce-c33a-4eba-8d30-325422bff4a9" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="b22b8931-18f4-4e5f-9590-d72288b0308d" isDerived="false" sourceEndRoleName="ConditionCompilerToken" targetEndRoleName="ReturnValueCompilerToken" isLeaf="false" isAbstract="false">
+            <classMoniker Id="248ddc9c-f0dc-4c55-ad1e-37b835570639" LastKnownName="ReturnValueCompilerToken" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="06253d24-c795-4265-992e-bdc7875d96eb" name="ConditionCompilerToken" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1ea5559c-4e15-491b-a0b9-7ae9a8abce84" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7320af27-c30d-4e2d-bfb8-9f3ebb9c01c5" name="ReturnValueCompilerToken" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="25c208e3-dda2-4f66-8798-0e17514d727f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dec4d993-586e-4acd-91ba-15946995e73f" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3807b943-b90b-40d9-a1e3-48768be9402b" name="AssignCompilerToken" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f2251295-0f33-404d-82ea-67b8f59d58a0" />
+        <generalsInternal>
+          <generalization Id="999f1b22-04b0-4b94-94cb-6b649cfb3938" isSubstitutable="false">
+            <classMoniker Id="f09b9faa-dfb5-4606-b908-9a6c7e488795" LastKnownName="CompilerToken" />
+            <elementDefinition Id="9087b39d-047b-48b1-8d24-8bfa31f70700" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="10bab872-0065-4a3d-9e18-e598ac5a58ff" isDerived="false" sourceEndRoleName="AssignCompilerToken" targetEndRoleName="ReturnValueCompilerToken" isLeaf="false" isAbstract="false">
+            <classMoniker Id="248ddc9c-f0dc-4c55-ad1e-37b835570639" LastKnownName="ReturnValueCompilerToken" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="48dcf237-ac05-4282-b417-67925c031fea" name="AssignCompilerToken" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3817e5c0-e3f6-4853-84dd-01b36ec37eb4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7adc6de0-6339-474f-a2d6-f00fec12e148" name="ReturnValueCompilerToken" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f852c1bc-891a-4829-822a-a6339f5bc03c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5e15384d-5a3b-4a87-afd0-c332f09afbcb" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="b3748ede-5df3-4e63-8a9d-505ec4996f5e" name="string name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3aae59e4-b67f-4614-a491-75b49d8ee6ca" />
+          </property>
+          <property Id="272503a7-cae8-4b2d-80d9-fb97107d3aee" name="ReturnValueCompilerToken compilerToken" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="64d0d92c-b128-47f7-8a50-1f1c0d1c13c4" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fb02134f-ead4-43bd-82c4-1954778abd6c" name="VirtualMachine" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3a6a52b0-89bf-42fe-833d-585ae98e90c7" />
+        <targetEnds>
+          <association Id="368c002b-8d5d-4bb3-8629-a7020474497b" isDerived="false" sourceEndRoleName="VirtualMachine" targetEndRoleName="SymbolTable" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2c0386ae-6abc-498e-bfda-d93f0f57f686" LastKnownName="SymbolTable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d10e720-9395-4b89-8941-197bea4ebe4c" name="VirtualMachine" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="83b1aa9b-b92f-4148-8320-aff846f89800" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="466a30fc-822f-43b9-943e-6d7a7dee446a" name="SymbolTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="50518bae-a586-4db3-9d18-0c75ee5a16d8" name="Lower" value="1">
+                      <elementDefinition Id="9e1dcfb3-4949-4fb7-bb87-63ca7f59db65" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b4326862-be3b-4539-9ac9-86c28e4d7ef9" name="Upper" value="1">
+                      <elementDefinition Id="dc925542-06cd-4dae-8519-89ef76bf8a4c" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="bbc8f356-e440-465f-965d-47229f42cf7e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2ff8d0f3-fe52-48b1-a294-4e299ace5010" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="7d7d38e3-a918-4a49-b2d6-fcb923d73fb6" name="executeAction" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="68a09653-391a-4742-ad7f-a5ac617b1fe9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="37c023bd-f8fd-4601-b9ba-62fcd34ce4c5" name="AssignCompilerToken" direction="In" isUnique="false">
+                  <elementDefinition Id="abb53b01-00b5-48cd-a2e6-715b089a7571" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="51a0888a-255a-48a2-a3e7-8f78665060d0" name="void Run" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e32fd4d1-8ba9-48b7-a0d1-cfb744fa0242" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1726055d-0206-4007-b26a-938bb90ee965" name="Action" direction="In" isUnique="false">
+                  <elementDefinition Id="d98d1c85-6e85-40a8-abea-8ad641a9bc57" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="037318a3-b951-48a9-9e1c-b636715a102a" name="executeAction" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="01a8a5a4-17a4-4007-9f4e-46dc3c55d687" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="730cccda-3ae5-47e1-97d3-6c6c376eb78d" name="VarCompilerToken" direction="In" isUnique="false">
+                  <elementDefinition Id="87a57019-b5a2-413f-9f1c-24d79b3a5147" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9a961b91-4074-4cfb-8a19-1e55baeb527d" name="executeAction" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cae4cb47-7f75-4b07-82bc-e0e78f73ae84" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e118c0db-0c95-4b6a-9f29-370dcd02b61c" name="ReturnValueCompilerToken" direction="In" isUnique="false">
+                  <elementDefinition Id="3d575df9-7117-4b1f-bb4d-f5bf545a8a34" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8bc077e9-8436-4512-aaa8-0dcf37767186" name="executeAction" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="74f46857-153c-403c-9d65-8fe532fa51db" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0c05c2ac-0531-403a-b0d3-bdc33634719b" name="FunctionCompilerToken" direction="In" isUnique="false">
+                  <elementDefinition Id="e096aaeb-2ba2-415b-87f3-a8741525b402" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="905742b1-a8d6-4bf8-9079-f31cd34b7802" name="executeAction" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b5ba8d7f-2a48-42f9-898e-218a8fadd1e8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="eb45dfa9-4447-4fd6-9a55-d040522658c8" name="ConditionCompilerToken" direction="In" isUnique="false">
+                  <elementDefinition Id="6e55a1b8-71bc-48bd-a69b-2d897370aad8" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a8c76a58-e59a-4915-a5bf-73e0eee8e65e" name="executeAction" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1f8db87f-fe45-4406-b2ff-94da787f930c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9d12ed7e-4a9a-4b86-a871-237a0307e03c" name="SubConditionCompilerToken" direction="In" isUnique="false">
+                  <elementDefinition Id="84a0365e-310a-4853-a47f-21d500770d4e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fa63078a-bb1d-4c75-8a9f-57872b92de29" name="ReturnCompilerToken" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e8aebdbe-820a-49f8-b890-fcb2a3634163" />
+        <generalsInternal>
+          <generalization Id="69cd720d-9a4d-4349-871e-70ed7db0a936" isSubstitutable="false">
+            <classMoniker Id="f09b9faa-dfb5-4606-b908-9a6c7e488795" LastKnownName="CompilerToken" />
+            <elementDefinition Id="98d9c201-5417-4de6-8c26-78062d07f789" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="3a318dc2-bb75-41f6-81ed-e548e5aba51c" isDerived="false" sourceEndRoleName="ReturnCompilerToken" targetEndRoleName="ReturnValueCompilerToken" isLeaf="false" isAbstract="false">
+            <classMoniker Id="248ddc9c-f0dc-4c55-ad1e-37b835570639" LastKnownName="ReturnValueCompilerToken" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d23c8dd-bb88-45c6-8d61-f0acbf646fc8" name="ReturnCompilerToken" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="878072dc-4c3b-4cf3-90d8-c41a4d6b0cfa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9566dd87-d212-4af9-916c-bab6b55d68c6" name="ReturnValueCompilerToken" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b260f874-a689-4119-8f54-e8c81ab04b7c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6ec8ddd3-6e13-4899-aceb-8252b8aecbd6" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="218a2116-4601-49d9-998d-6f1a31211dc8" name="FunctionSymbol" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2212ef9f-cbc8-4ae4-9458-0ebacb1d1cf0" />
+        <targetEnds>
+          <association Id="d38f39c5-c832-44ff-bb19-ab33fa6e1178" isDerived="false" sourceEndRoleName="FunctionSymbol" targetEndRoleName="SymbolTable" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2c0386ae-6abc-498e-bfda-d93f0f57f686" LastKnownName="SymbolTable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="79f1557b-36de-4f42-bd8b-1f83761bcc43" name="FunctionSymbol" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="36bb7cac-353b-47bf-897c-5911eb4f3cc5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0d208910-bffb-4f00-9443-776b72797623" name="SymbolTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3b76a557-499d-4903-96f6-3155ebe6e72f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3148d110-7004-46ea-99fb-acc123fece38" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="86b8fa9d-d40e-4c7b-867d-d833b90ab5b4" name="Compiler">
     <elementDefinition Id="d38c41b8-2885-417d-9d8e-3493cecccd4c" />

@@ -66,13 +66,13 @@
                     <literalString
                       Id="63915690-2a21-4768-9454-8350e456914d"
                       name="Lower"
-                      value="0" />
+                      value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="752d4d27-b19a-42fd-a622-f21bb0297212"
                       name="Upper"
-                      value="*" />
+                      value="1" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -133,8 +133,8 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="0799a3aa-69f6-4d91-a376-e1610b97ffa0"
-            name="List&lt;SymbolTable&gt; symbolTables"
+            Id="f7988e19-7b40-4604-a123-d7170f159b70"
+            name="Action firstAction"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -145,8 +145,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="f7988e19-7b40-4604-a123-d7170f159b70"
-            name="Action firstAction"
+            Id="d7f97fd1-7286-47c0-925f-7928394bf946"
+            name="Action lastAction"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -250,93 +250,6 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
-        <ownedAttributesInternal>
-          <property
-            Id="dcf84107-974f-4206-b07c-40b2cc4ade0a"
-            name="Object left"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="d295a62b-8618-4d41-a556-35ce62a1dbda"
-            name="Object right"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="c1833de1-a107-4ecb-9e29-5a5386ce9ce9"
-            name="Object result"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="81896555-7fad-4669-9090-f924fcf5ec30"
-            name="execute"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f207c445-e793-4a68-9bec-7a02b51c1040"
-                  direction="Return">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="8ba4505a-ef1b-4e45-93c7-496a8ff338d2"
-                      LastKnownName="void"
-                      LastKnownLocation="Compiler.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="3fafefa1-ea8e-429d-8ca8-f1e151c9d154"
-            name="getResult"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="cf3eda75-ef70-42b7-9433-27142cd60dcc"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="91e3da57-bd17-4dbf-a755-2ff8734b203d"
-                      LastKnownName="Object"
-                      LastKnownLocation="Compiler.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -400,6 +313,58 @@
                   <upperValueInternal>
                     <literalString
                       Id="57f446e2-3e4c-46c0-ab20-0dcaa9eaa969"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fd8f65a7-b5cb-4f35-ae97-916b4f5d7262"
+            isDerived="false"
+            sourceEndRoleName="SymbolTable"
+            targetEndRoleName="FunctionSymbol"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2212ef9f-cbc8-4ae4-9458-0ebacb1d1cf0"
+              LastKnownName="FunctionSymbol"
+              LastKnownLocation="Compiler.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ec88cb7-134f-4327-b73f-b374a8c582b8"
+                  name="SymbolTable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="21f2ec35-6f21-4f80-8608-3451e7ca9e23"
+                  name="FunctionSymbol"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="28e931d5-5d88-4bda-8e54-188b7043f9c7"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="906ef322-5e91-44f9-8b0a-ed8188f419bc"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -691,10 +656,64 @@
               LastKnownLocation="Compiler.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="209efca2-d797-4cb0-bd8c-2a699049380e"
+            isDerived="false"
+            sourceEndRoleName="FunctionCompilerToken"
+            targetEndRoleName="ReturnValueCompilerToken"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cf7f91c0-60d2-4411-bf97-ebe05dd318f3"
+              LastKnownName="ReturnValueCompilerToken"
+              LastKnownLocation="Compiler.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="238265fe-b022-4c72-ba00-092aba174542"
+                  name="FunctionCompilerToken"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="675ffe46-3df6-4155-8d60-f28898d1b6a7"
+                  name="ReturnValueCompilerToken"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0309049b-f45b-4516-9b37-24c8239633dd"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="09211264-f783-4fca-9baa-96f572d22f30"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="7f4980bb-921e-4ad9-849e-bd672cb22c4f"
-            name="String functionName"
+            Id="06770a46-5193-4129-868b-3a2ee72c65b0"
+            name="string name"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -705,8 +724,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="f93dffd2-3f90-4868-87c9-e618d56531ac"
-            name="List&lt;Object&gt; data"
+            Id="48d6f3fc-2256-4450-8410-b4c938fe3aca"
+            name="List&lt;string&gt; argumentNames"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -728,6 +747,618 @@
       <undefinedType
         Id="8ba4505a-ef1b-4e45-93c7-496a8ff338d2"
         name="void" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="716c1860-1600-4d0a-ae27-be69a35f011d"
+        name="VarCompilerToken"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="6a19c3f0-80dd-4f06-9f4c-2f0b1cda4714"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
+              LastKnownName="CompilerToken"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="bee43ce7-e8c2-4376-b259-5ea75fe31c3f"
+            name="string name"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="21ac4d51-5837-49f6-87a8-95352624f1f6"
+            name="TokenType frontOperator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="906a2363-08a7-4ce5-a884-6c93fa7398e9"
+            name="TokenType backOperator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cf7f91c0-60d2-4411-bf97-ebe05dd318f3"
+        name="ReturnValueCompilerToken"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="1a74fe54-dc5e-432b-aff6-bb8e02d64f24"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
+              LastKnownName="CompilerToken"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="b966eb3d-707e-4ed6-b450-b82680682212"
+            name="string name"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b6868832-2626-4493-b988-c417430b4777"
+            name="List&lt;ReturnValueCompilerToken&gt; arguments"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4347f083-3275-4c58-95e3-95c7fc024f31"
+        name="ConditionCompilerToken"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="22b2b5ce-c33a-4eba-8d30-325422bff4a9"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
+              LastKnownName="CompilerToken"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="dec4d993-586e-4acd-91ba-15946995e73f"
+            isDerived="false"
+            sourceEndRoleName="ConditionCompilerToken"
+            targetEndRoleName="ReturnValueCompilerToken"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cf7f91c0-60d2-4411-bf97-ebe05dd318f3"
+              LastKnownName="ReturnValueCompilerToken"
+              LastKnownLocation="Compiler.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1ea5559c-4e15-491b-a0b9-7ae9a8abce84"
+                  name="ConditionCompilerToken"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="25c208e3-dda2-4f66-8798-0e17514d727f"
+                  name="ReturnValueCompilerToken"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4645fac9-7fab-48a9-a9ed-29bab02dbeb6"
+        name="SubConditionCompilerToken"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="25d8d49a-c7ed-4094-8bc7-e87f1f7c71ca"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
+              LastKnownName="CompilerToken"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="6e5a4a03-aecf-41b8-a9f8-ce9df4aa6c5d"
+            name="TokenType operator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d578e126-df2a-4763-832a-e7ff280f0a91"
+            name="ReturnValueCompilerToken right"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a241ca88-d05c-4adb-9bc0-6103e0812940"
+            name="ReturnValueCompilerToken left"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f2251295-0f33-404d-82ea-67b8f59d58a0"
+        name="AssignCompilerToken"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="9087b39d-047b-48b1-8d24-8bfa31f70700"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
+              LastKnownName="CompilerToken"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="5e15384d-5a3b-4a87-afd0-c332f09afbcb"
+            isDerived="false"
+            sourceEndRoleName="AssignCompilerToken"
+            targetEndRoleName="ReturnValueCompilerToken"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cf7f91c0-60d2-4411-bf97-ebe05dd318f3"
+              LastKnownName="ReturnValueCompilerToken"
+              LastKnownLocation="Compiler.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3817e5c0-e3f6-4853-84dd-01b36ec37eb4"
+                  name="AssignCompilerToken"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f852c1bc-891a-4829-822a-a6339f5bc03c"
+                  name="ReturnValueCompilerToken"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="3aae59e4-b67f-4614-a491-75b49d8ee6ca"
+            name="string name"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="64d0d92c-b128-47f7-8a50-1f1c0d1c13c4"
+            name="ReturnValueCompilerToken compilerToken"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3a6a52b0-89bf-42fe-833d-585ae98e90c7"
+        name="VirtualMachine"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="2ff8d0f3-fe52-48b1-a294-4e299ace5010"
+            isDerived="false"
+            sourceEndRoleName="VirtualMachine"
+            targetEndRoleName="SymbolTable"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ac504da3-9474-4460-a7d3-cea658b12abb"
+              LastKnownName="SymbolTable"
+              LastKnownLocation="Compiler.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="83b1aa9b-b92f-4148-8320-aff846f89800"
+                  name="VirtualMachine"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bbc8f356-e440-465f-965d-47229f42cf7e"
+                  name="SymbolTable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9e1dcfb3-4949-4fb7-bb87-63ca7f59db65"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="dc925542-06cd-4dae-8519-89ef76bf8a4c"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="68a09653-391a-4742-ad7f-a5ac617b1fe9"
+            name="executeAction"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="abb53b01-00b5-48cd-a2e6-715b089a7571"
+                  name="AssignCompilerToken"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e32fd4d1-8ba9-48b7-a0d1-cfb744fa0242"
+            name="void Run"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d98d1c85-6e85-40a8-abea-8ad641a9bc57"
+                  name="Action"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="01a8a5a4-17a4-4007-9f4e-46dc3c55d687"
+            name="executeAction"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="87a57019-b5a2-413f-9f1c-24d79b3a5147"
+                  name="VarCompilerToken"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cae4cb47-7f75-4b07-82bc-e0e78f73ae84"
+            name="executeAction"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3d575df9-7117-4b1f-bb4d-f5bf545a8a34"
+                  name="ReturnValueCompilerToken"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="74f46857-153c-403c-9d65-8fe532fa51db"
+            name="executeAction"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e096aaeb-2ba2-415b-87f3-a8741525b402"
+                  name="FunctionCompilerToken"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b5ba8d7f-2a48-42f9-898e-218a8fadd1e8"
+            name="executeAction"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6e55a1b8-71bc-48bd-a69b-2d897370aad8"
+                  name="ConditionCompilerToken"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1f8db87f-fe45-4406-b2ff-94da787f930c"
+            name="executeAction"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="84a0365e-310a-4853-a47f-21d500770d4e"
+                  name="SubConditionCompilerToken"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e8aebdbe-820a-49f8-b890-fcb2a3634163"
+        name="ReturnCompilerToken"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="98d9c201-5417-4de6-8c26-78062d07f789"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b9c5f2d3-f789-4d3d-89ba-8623a27c3087"
+              LastKnownName="CompilerToken"
+              LastKnownLocation="Compiler.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="6ec8ddd3-6e13-4899-aceb-8252b8aecbd6"
+            isDerived="false"
+            sourceEndRoleName="ReturnCompilerToken"
+            targetEndRoleName="ReturnValueCompilerToken"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cf7f91c0-60d2-4411-bf97-ebe05dd318f3"
+              LastKnownName="ReturnValueCompilerToken"
+              LastKnownLocation="Compiler.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="878072dc-4c3b-4cf3-90d8-c41a4d6b0cfa"
+                  name="ReturnCompilerToken"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b260f874-a689-4119-8f54-e8c81ab04b7c"
+                  name="ReturnValueCompilerToken"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2212ef9f-cbc8-4ae4-9458-0ebacb1d1cf0"
+        name="FunctionSymbol"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="3148d110-7004-46ea-99fb-acc123fece38"
+            isDerived="false"
+            sourceEndRoleName="FunctionSymbol"
+            targetEndRoleName="SymbolTable"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ac504da3-9474-4460-a7d3-cea658b12abb"
+              LastKnownName="SymbolTable"
+              LastKnownLocation="Compiler.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="36bb7cac-353b-47bf-897c-5911eb4f3cc5"
+                  name="FunctionSymbol"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3b76a557-499d-4903-96f6-3155ebe6e72f"
+                  name="SymbolTable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
